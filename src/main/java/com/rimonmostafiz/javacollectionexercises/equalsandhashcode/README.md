@@ -14,7 +14,7 @@ public class Person {
 }
 ```
 
-What is the wrong with `return age == person.age && name == person.name;`?
+What is wrong with `return age == person.age && name == person.name;`?
 
 - This might work or might not work!! <br>
 - As `name` is String and `==` on String check the reference only. <br>
