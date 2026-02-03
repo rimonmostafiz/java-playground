@@ -3,7 +3,7 @@
 import java.util.Objects;
 
 public class Person {
-    Integer age;
+    int age;
     String name;
 
     @Override
