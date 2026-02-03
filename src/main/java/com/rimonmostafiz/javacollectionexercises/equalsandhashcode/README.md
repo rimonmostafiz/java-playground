@@ -1,3 +1,18 @@
+## The equals contract
+
+- Reflexivity
+  - an object should be equal to itself
+- Symmetry
+  - if x is equals to y, then y should also be equlas to x
+- Transitivity
+  - if x is equal to y and y is equal to z, then x should also be equal to z
+- Consistency
+  - should return the same result unless the state of the object has been modified
+- Non-nullity
+  - an object should never be considered equal to null
+
+## An equals implementation
+
 ```java
 
 import java.util.Objects;
@@ -95,4 +110,4 @@ Now above will work, we can still do a slight modification and make it better
     }
 ```
 This one is a better version which protects against null <br>
-NOTE: One thing to keep in mind is if name is a custom class that we've implemented, then we have to make sure it has an equal implementation for this to work.
+**NOTE:** One thing to keep in mind is if name is a custom class that we've implemented, then we have to make sure it has an equal implementation for this to work.
