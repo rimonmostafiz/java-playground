@@ -1,3 +1,5 @@
+## `Interface Comparable<T>`
+This interface imposes a total ordering on the objects of each class that implements it. This ordering is referred to as the class's natural ordering, and the class's compareTo method is referred to as its natural comparison method.
 ```java
 public interface Comparable<T> {
     int compareTo(T o);
@@ -43,3 +45,25 @@ If we switch the order of the argument in Integer.compare() then the order will 
         return Integer.compare(o.age, this.age);
     }
 ```
+
+
+## `Interface Comparator<T>`
+```java
+@FunctionalInterface
+public interface Comparator<T> {
+    int compare(T o1, T o2);
+}
+```
+A comparison function, which imposes a total ordering on some collection of objects. Comparators can be passed to a sort method (such as Collections.sort or Arrays.sort) to allow precise control over the sort order. Comparators can also be used to control the order of certain data structures (such as sorted sets or sorted maps), or to provide an ordering for collections of objects that don't have a natural ordering.<br>
+
+Sometimes what we're comparing depends on context <br>
+Let's say we're soring a Student Class, we can't always relay on ordering based on id, for example we might need
+- **By grade** for ranking
+- **By height** for physical training exercises
+- **By name** for attendance
+
+But there is oly one **compareTo()** method!
+The solution to this problem is The Comparator interface which can act as a third party comparator which Take two object of a same type.<br>
+As this is kinda **Third Party** comparator we can have multiple implementation of the comparator of same type.
+
+NOTE: Also as this is a @FunctionalInterface we can pass lambda and create our own comparator without creating a class.
