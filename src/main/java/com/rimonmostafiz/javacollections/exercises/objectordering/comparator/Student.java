@@ -1,4 +1,4 @@
-package com.rimonmostafiz.java.collection.exercises.objectordering.comparator;
+package com.rimonmostafiz.javacollections.exercises.objectordering.comparator;
 
 public class Student {
     private String firstName;

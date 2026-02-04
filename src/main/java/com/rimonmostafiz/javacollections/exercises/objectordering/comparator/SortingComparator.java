@@ -1,6 +1,7 @@
-package com.rimonmostafiz.java.collection.exercises.objectordering.comparator;
+package com.rimonmostafiz.javacollections.exercises.objectordering.comparator;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class SortingComparator {
     public static void main(String[] args) {
@@ -19,7 +20,7 @@ public class SortingComparator {
         System.out.println(students);
         students.sort((o1, o2) -> Integer.compare(o2.getId(), o1.getId()));
         System.out.println(students);
-        students.sort((o1, o2) -> o1.getDepartment().compareTo(o2.getDepartment()));
+        students.sort(Comparator.comparing(Student::getDepartment));
         System.out.println(students);
     }
 }

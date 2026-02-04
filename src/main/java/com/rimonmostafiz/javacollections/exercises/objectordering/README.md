@@ -11,9 +11,10 @@ public interface Comparable<T> {
 3. **Zero** They are both the same
 
 ```java
-import com.rimonmostafiz.java.collection.exercises.objectordering.comparable.Person;
+import com.rimonmostafiz.javacollections.exercises.objectordering.comparable.Person;
 
 // given that id is an int
+
 public int compareTo(Person o) {
     return this.id - o.id;
 }
@@ -66,4 +67,15 @@ But there is oly one **compareTo()** method!
 The solution to this problem is The Comparator interface which can act as a third party comparator which Take two object of a same type.<br>
 As this is kinda **Third Party** comparator we can have multiple implementation of the comparator of same type.
 
-NOTE: Also as this is a @FunctionalInterface we can pass lambda and create our own comparator without creating a class.
+Java 8 provides new ways of defining Comparators by using lambda expressions, and the comparing() static factory method.
+
+Let’s see a quick example of how to use a lambda expression to create a Comparator:
+```java
+Comparator byRanking = (Player player1, Player player2) -> Integer.compare(player1.getRanking(), player2.getRanking());
+```
+The Comparator.comparing method takes a method calculating the property that will be used for comparing items, and returns a matching Comparator instance:
+```java
+Comparator<Player> byRanking = Comparator.comparing(Player::getRanking);
+
+Comparator<Player> byAge = Comparator.comparing(Player::getAge);
+```

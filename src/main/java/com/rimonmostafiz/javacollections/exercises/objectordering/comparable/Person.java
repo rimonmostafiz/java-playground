@@ -1,4 +1,4 @@
-package com.rimonmostafiz.java.collection.exercises.objectordering.comparable;
+package com.rimonmostafiz.javacollections.exercises.objectordering.comparable;
 
 public class Person implements Comparable<Person> {
     private String name;
