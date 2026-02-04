@@ -1,4 +1,4 @@
-package com.rimonmostafiz.javacollectionexercises.equalsandhashcode;
+package com.rimonmostafiz.java.collection.exercises.equalshashcode;
 
 import java.util.Date;
 import java.util.Objects;
