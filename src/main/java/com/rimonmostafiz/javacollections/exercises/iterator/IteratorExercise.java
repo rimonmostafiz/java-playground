@@ -20,7 +20,7 @@ public class IteratorExercise {
 
         // this works because Collection implements iterable interface
         // this is better mordern way to iterate a colleciton
-        for (String fruitStr: fruits) {
+        for (String fruitStr : fruits) {
             System.out.println("fruitStr = " + fruitStr);
         }
     }
