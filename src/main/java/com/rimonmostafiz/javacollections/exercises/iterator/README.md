@@ -1,4 +1,5 @@
 ### Fail-fast iterators
+
 - iterators not tolerant to underlying changes
 - uses and internal modification counter
 - throw **ConcurrentModificationException** if modified since last `next()`
