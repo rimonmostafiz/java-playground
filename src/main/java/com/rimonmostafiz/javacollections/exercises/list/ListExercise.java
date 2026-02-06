@@ -7,8 +7,6 @@ Then write code to find the sum of all integers
 
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class ListExercise {
     public static void main(String[] args) {
